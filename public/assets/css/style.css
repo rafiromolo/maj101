@@ -7,14 +7,35 @@ body {
 
 /* Start of Header Section */
 .header {
-    height: 150px; }
-    .header .title {
-        font-size: 40px; }
-    .header .subtitle {
-        font-size: 24px; }
-    .header .headerDate,
-    .header .headerTime {
-            font-size: 20px; }
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .header .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    .header .headings {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2 / span 2; }
+        .header .headings .title {
+            font-weight: 700;
+            font-size: 40px; }
+        .header .headings .subtitle {
+            font-weight: 600;
+            font-size: 24px; }
+    .header .datetime {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding-inline-end: 1rem; }
+        .header .datetime .headerDate,
+        .header .datetime .headerTime {
+                font-size: 20px;
+                font-weight: 700; }
 /* End of Header Section */
 
 /* Start of Table Section */
